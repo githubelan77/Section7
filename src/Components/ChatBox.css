@@ -1,0 +1,567 @@
+General Chat Page Styling .chatbox-page {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  min-height: 100vh;
+  padding: 20px;
+  /* width: 450px; */
+}
+
+/* Chat Heading */
+.chatbox-heading {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+/* Nickname Input */
+.nickname-container {
+  margin-bottom: 8px;
+}
+
+.nickname-input {
+  padding: 12px;
+  border-radius: 25px;
+  border: 2px solid #2575fc;
+  width: 250px;
+  font-size: 14px;
+  text-align: center;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.nickname-input:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 15px rgba(37, 117, 252, 0.3);
+}
+
+/* Chat Container */
+.chatbox-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  width: 95%;
+  max-width: 500px;
+  margin: auto;
+  padding-left: 100px;
+}
+
+/* Chat Messages */
+.chatbox-messages {
+  max-height: 250px;
+  overflow-y: auto;
+  border: 2px solid #ff6f61;
+  padding: 10px;
+  background: #fff9f9;
+  border-radius: 10px;
+}
+
+.chatbox-message {
+  text-align: left;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.chatbox-message strong {
+  color: #ff6f61;
+}
+
+/* Image Message */
+.chatbox-img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+/* Chat Input Area */
+.chatbox-input-container {
+  margin-top: 10px;
+}
+
+/* Input Fields */
+.chatbox-input {
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 2px solid rgba(37, 117, 252, 0.3);
+  background: rgba(255, 255, 255, 0.9);
+  outline: none;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.chatbox-input:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 15px rgba(37, 117, 252, 0.2);
+}
+
+/* Table Styling for Inputs */
+table {
+  width: 100%;
+  border-spacing: 10px;
+  border-collapse: separate;
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 117, 252, 0.3);
+}
+
+/* Emoji Button */
+button.emoji-btn {
+  font-size: 20px;
+  background: white;
+  border: 2px solid #ff6f61;
+  color: #ff6f61;
+}
+
+button.emoji-btn:hover {
+  background: #ff6f61;
+  color: white;
+}
+
+.emoji-picker-box h4 {
+  font-size: 14px;
+  color: #ff6f61;
+  margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .chatbox-container {
+      width: 90%;
+  }
+
+  .nickname-input {
+      width: 90%;
+  }
+
+  .chatbox-input {
+      width: 85%;
+  }
+}
+
+/* Wrapper for Chatbox & Emoji Picker */
+.chatbox-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* Emoji Picker Positioned to the Right of Chatbox */
+.emoji-picker-box {
+  position: absolute;
+  right: -450px;
+  /* Adjusts emoji picker placement */
+  top: 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  width: 400px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 10;
+  /* Ensures it's above other elements */
+}
+
+/* Emoji Button */
+.emoji-btn {
+  font-size: 20px;
+  background: white;
+  border: 2px solid #ff6f61;
+  color: #ff6f61;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.emoji-btn:hover {
+  background: #ff6f61;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .emoji-picker-box {
+      right: -180px;
+      /* Adjust for smaller screens */
+  }
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background: linear-gradient(135deg, #000428, #004e92);
+}
+
+.dark-mode .chatbox-container {
+  background: rgba(18, 18, 18, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .chatbox-messages {
+  background: #2c2c2c;
+  border-color: #444;
+}
+
+.dark-mode .chatbox-input {
+  background: #333;
+  color: #fff;
+  border-color: #444;
+}
+
+.dark-mode .chatbox-message {
+  color: #fff;
+}
+
+/* Controls Container */
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 500px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  padding: 8px 15px;
+  font-size: 14px;
+}
+
+/* Online Status */
+.online-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.online-indicator {
+  width: 8px;
+  height: 8px;
+  background-color: #2ecc71;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Message Header */
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #666;
+}
+
+.dark-mode .timestamp {
+  color: #aaa;
+}
+
+/* Message Reactions */
+.message-reactions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.reaction-btn {
+  background: transparent;
+  border: 1px solid #ddd;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.reaction-btn:hover {
+  background: #f0f0f0;
+}
+
+.reaction-btn.active {
+  background: #e3f2fd;
+  border-color: #2196f3;
+}
+
+.dark-mode .reaction-btn {
+  border-color: #444;
+  color: #fff;
+}
+
+.dark-mode .reaction-btn:hover {
+  background: #444;
+}
+
+.dark-mode .reaction-btn.active {
+  background: #1a237e;
+  border-color: #3f51b5;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+  padding: 4px 8px;
+}
+
+.dark-mode .typing-indicator {
+  color: #aaa;
+}
+
+/* Video Components */
+.video-controls {
+  margin-top: 15px;
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+.record-btn {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  margin-bottom: 10px;
+}
+
+.record-btn:hover {
+  background: linear-gradient(135deg, #38ef7d, #11998e);
+}
+
+.video-recorder {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+}
+
+.dark-mode .video-recorder {
+  background: #2c2c2c;
+  border-color: #444;
+}
+
+.camera-preview {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: #000;
+}
+
+.recorded-video-preview {
+  margin-top: 15px;
+}
+
+.recorded-video-preview video {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.recording-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.recording-controls button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.recording-controls button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 117, 252, 0.3);
+}
+
+/* Video Message in Chat */
+.video-message {
+  margin: 10px 0;
+}
+
+.chatbox-video {
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: #000;
+}
+
+.dark-mode .chatbox-video {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Recording Indicator */
+.recording-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ff3366;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+      opacity: 1;
+      transform: scale(1);
+  }
+
+  50% {
+      opacity: 0.5;
+      transform: scale(0.95);
+  }
+
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Audio Components */
+.audio-controls {
+  margin-top: 20px;
+  padding: 15px;
+  border-top: 2px solid rgba(37, 117, 252, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.audio-recorder {
+  margin-top: 15px;
+  padding: 20px;
+  background: rgba(106, 17, 203, 0.05);
+  border-radius: 15px;
+  border: 2px solid rgba(37, 117, 252, 0.2);
+  transition: all 0.3s ease;
+}
+
+.audio-recorder:hover {
+  background: rgba(106, 17, 203, 0.1);
+}
+
+.audio-message {
+  margin: 10px 0;
+  padding: 10px;
+  background: rgba(37, 117, 252, 0.05);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.audio-message:hover {
+  background: rgba(37, 117, 252, 0.1);
+}
+
+.chatbox-audio {
+  width: 100%;
+  max-width: 300px;
+  margin: 5px 0;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Recording Controls */
+.recording-controls button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.recording-controls button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 117, 252, 0.3);
+}
+
+/* Recording Button */
+button.record-btn {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+}
+
+button.record-btn:hover {
+  background: linear-gradient(135deg, #38ef7d, #11998e);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(56, 239, 125, 0.3);
+}
+
+/* Dark Mode Enhancements */
+.dark-mode .audio-recorder {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .audio-message {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Message Input Enhancements */
+.chatbox-input {
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 2px solid rgba(37, 117, 252, 0.3);
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.chatbox-input:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 15px rgba(37, 117, 252, 0.2);
+}
+
+/* Send Buttons Enhancement */
+button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 117, 252, 0.3);
+}
